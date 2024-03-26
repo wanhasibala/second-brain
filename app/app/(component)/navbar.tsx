@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Navbar() {
   return (
@@ -12,9 +13,7 @@ export default function Navbar() {
           <Link href="/about">About</Link>
           <Link href="/features">Features</Link>
         </div>
-        <Button>
-          <Link href={"/signup"}>Get Started</Link>
-        </Button>
+        {/* <UserButton ="/dashboard" /> */}
       </div>
     </>
   );
