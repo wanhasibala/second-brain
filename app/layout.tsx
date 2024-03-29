@@ -1,7 +1,8 @@
+
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import {ClerkProvider} from "@clerk/nextjs"
+import { SessionProvider } from "next-auth/react";
 
 const inter = Roboto({ subsets: ["latin"], variable: '--font-sans' , weight: ['400','500', '700', '900']});
 
@@ -16,11 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
 
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* <SessionProvider> */}
+        {children}
+        {/* </SessionProvider> */}
+        </body>
     </html>
-    </ClerkProvider>
   );
 }

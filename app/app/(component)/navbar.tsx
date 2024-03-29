@@ -1,10 +1,12 @@
-"use-client";
-
+"use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { UserButton } from "@clerk/nextjs";
+import { signIn } from "next-auth/react";
+import { getServerSession } from "next-auth";
+import { options } from "@/app/api/auth/[...nextauth]/options";
 
-export default function Navbar() {
+const Navbar = async () => {
+  const session = await getServerSession(options);
   return (
     <>
       <div className="flex justify-between items-center mx-[40px] lg:mx-[120px] mt-[40px]  ">
@@ -13,8 +15,14 @@ export default function Navbar() {
           <Link href="/about">About</Link>
           <Link href="/features">Features</Link>
         </div>
-        {/* <UserButton ="/dashboard" /> */}
+        {session ? (
+          <Link href="/api/auth/signout?callbackUrl=/">Logout</Link>
+        ): (
+          <Link href="/api/auth/signin">Login</Link>
+        )}
       </div>
     </>
   );
-}
+};
+
+export default Navbar;

@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, AtSign,Eye } from "lucide-react";
@@ -6,6 +6,8 @@ import {IonIcon } from '@ionic/react';
 import {logoGoogle, logoGithub, logoFacebook } from "ionicons/icons"
 import { FunctionComponent, PropsWithChildren } from "react";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 interface WizardProps {
   title: string;
@@ -13,6 +15,7 @@ interface WizardProps {
 }
 
 export default function Form() {
+  
   return (
     <>
       <div className="max-w-[640px] mx-auto mt-[50px] flex justify-center items-center rounded-[20px] border flex-col gap-[24px] py-10 px-20  border-slate-300">
