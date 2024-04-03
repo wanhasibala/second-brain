@@ -1,10 +1,14 @@
-
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { SessionProvider } from "next-auth/react";
+import Page from "./(landingpage)/page";
 
-const inter = Roboto({ subsets: ["latin"], variable: '--font-sans' , weight: ['400','500', '700', '900']});
+const inter = Roboto({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["400", "500", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,13 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-
     <html lang="en">
       <body className={inter.className}>
         {/* <SessionProvider> */}
         {children}
+        {/* <Page /> */}
         {/* </SessionProvider> */}
-        </body>
+      </body>
     </html>
   );
 }

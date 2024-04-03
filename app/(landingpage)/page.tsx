@@ -1,7 +1,7 @@
-import Navbar from "./app/(component)/navbar";
-import Hero from "./app/(component)/Hero";
+import Navbar from "../app/(component)/navbar";
+import Hero from "../app/(component)/Hero";
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <div className="h-[100vh] overflow-hidden">
