@@ -1,3 +1,4 @@
+"use client"
 import { Icon } from "ionicons/dist/types/components/icon/icon";
 import {
   Archive,
@@ -26,7 +27,7 @@ interface WizardProps {
 const LeftSidebar = () => {
   return (
     <>
-      <div className="w-[240px] h-full bg-slate-100 py-[50px] px-5 gap-10 flex flex-col">
+      <div className="min-w-[240px] h-full bg-slate-100 py-[50px] px-5 gap-10 flex flex-col">
         <h3 className="text-2xl font-semibold text-slate-800"> Second Brain</h3>
         {/* TOOLS */}
         <div className="p-2.5 gap-4 flex flex-col text-slate-700">

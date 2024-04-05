@@ -2,6 +2,8 @@
 import { Bell, Circle, Settings, Square, SquareCheck } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
 import React, { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvatarFallback, Avatar, AvatarImage } from "@/components/ui/avatar";
 
 const RightSidebar = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -9,7 +11,10 @@ const RightSidebar = () => {
     <div className="w-[280px] bg-slate-100 h-full py-12 px-5 gap-10 flex flex-col   ">
       {/* Profile */}
       <div className="flex gap-3 p-1 items-center ">
-        <div className="rounded-lg w-16 h-10 bg-slate-800 "></div>
+        <Avatar>
+          <AvatarImage src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile image" width={40} height={40} className="bg-contain"/>
+          {/* <AvatarFallback>CN</AvatarFallback> */}
+        </Avatar>
         <div className="flex flex-col gap-0 w-full">
           <h3 className="text-base text-slate-900"> User Name </h3>
           <p className="text-sm text-slate-600">user@mail.com</p>
@@ -28,7 +33,7 @@ const RightSidebar = () => {
       <div className="flex flex-col gap-2 p-1">
         <p>Important task</p>
         <div className="flex items-center gap-2">
-          <Square size={16} className="text-slate-400" />
+          <Checkbox />
           <div className="flex flex-col gap-2">
             <p>Create Ui Library</p>
             <div className="flex items-center gap-1 text-sm">
