@@ -17,7 +17,7 @@ export default function Hero() {
           intuitive note-taking app
         </p>
           <Button size={"lg"} className="text-xl">
-            <Link href={"/signup"}>Get Started</Link>
+            <Link href={"/dashboard"}>Get Started</Link>
           </Button>
         <Image width={1200} height={930} src="/Home Page.webp" alt="Hero Picture" />
       </div>

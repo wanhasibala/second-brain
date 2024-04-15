@@ -8,11 +8,11 @@ import { AvatarFallback, Avatar, AvatarImage } from "@/components/ui/avatar";
 const RightSidebar = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
   return (
-    <div className="w-[280px] bg-slate-100 h-full py-12 px-5 gap-10 flex flex-col   ">
+    <div className="w-[280px] bg-slate-100 h-full py-12 px-5 gap-10  flex-col xl:flex hidden  ">
       {/* Profile */}
       <div className="flex gap-3 p-1 items-center ">
         <Avatar>
-          <AvatarImage src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile image" width={40} height={40} className="bg-contain"/>
+          <AvatarImage src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile image" width={40} height={40}/>
           {/* <AvatarFallback>CN</AvatarFallback> */}
         </Avatar>
         <div className="flex flex-col gap-0 w-full">
