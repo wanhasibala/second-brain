@@ -8,7 +8,7 @@ interface WizardProps {
 export const Inbox = () => {
   return (
     <div className="mb-10">
-      <h4 className="text-lg font-medium">INBOX</h4>
+      {/* <h4 className="text-lg font-medium">INBOX</h4> */}
       <div className=" py-5 flex flex-col gap-5">
         <div className="w-full border-b flex gap-5 border-slate-400">
           <HeaderRow name="Resources">
@@ -48,7 +48,7 @@ const HeaderRow: FunctionComponent<PropsWithChildren<WizardProps>> = ({
 
 const List = ({ title, area }: { title: string; area: string }) => {
   return (
-    <div className="flex w-full justify-between">
+    <div className="flex w-full justify-between border border-slate-200 rounded-sm p-2">
       <div className="flex gap-1 items-center">
         <Bookmark  size={18} />
         <p>{title}</p>

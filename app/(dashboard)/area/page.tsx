@@ -55,7 +55,7 @@ const Project = ({ project }: { project: string }) => {
   return (
     <Link
       className="flex  items-center gap-1  hover:bg-slate-100 w-fit "
-      href="/"
+      href="/project"
     >
       <File size={14} className="text-slate-500" />
       <p className="text-sm  text-slate-500">{project}</p>

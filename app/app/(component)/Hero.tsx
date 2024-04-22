@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="py-[4px] px-[10px] bg-slate-700 rounded-full text-slate-100 text-sm w-fit">
           Inspired by Thiago Forte Books
         </div>
-        <h1 className="text-4xl max-w-[600px] text-center font-bold mt-[10px] text-slate-950">
+        <h1 className="text-6xl mx-[120px] max-w-[960px] text-center font-bold mt-[10px] text-slate-950">
           Empower your productivity with a digital second brain
         </h1>
         <p className="my-[40px] max-w-[600px] text-xl font-normal text-center">

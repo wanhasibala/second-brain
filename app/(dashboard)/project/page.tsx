@@ -5,11 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  BriefcaseBusiness,
-  Folder,
-  LayoutGrid,
-} from "lucide-react";
+import { BriefcaseBusiness, Folder, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import { Header } from "../(components)/Header";
 
@@ -24,7 +20,7 @@ const Page = () => {
           <LayoutGrid />
         </Button>
       </Header>
-    <div className="w-full grid lg:grid-cols-3 grid-cols-2  gap-5">
+      <div className="w-full grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
         {/* INBOX */}
         <div className="flex flex-col gap-2.5">
           <p className="bg-slate-200 px-2 py-1 w-fit rounded-full">Inbox</p>
@@ -53,12 +49,12 @@ const CardProject = ({ title, area }: { title: string; area: string }) => {
   return (
     <Card className="min-w-[200px] rounded-sm">
       <CardHeader className="w-full">
-        <CardTitle className="flex w-full gap-1 mb-1">
-          <Folder fill="#1E293B" size={20} stroke="#fff" /> {title}
+        <CardTitle className="flex w-full gap-1 mb-1 text-slate-600">
+          <Folder  size={20}  /> {title}
         </CardTitle>
         <Link href="/area">
           <CardDescription className="flex gap-1 hover:bg-slate-50 w-fit px-1 py-0.5 rounded-md underline-offset-4 items-center">
-            <BriefcaseBusiness fill="#334155" size={14} stroke="#ffffff" />
+            <BriefcaseBusiness size={14}  />
             {area}
           </CardDescription>
         </Link>

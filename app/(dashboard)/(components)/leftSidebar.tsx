@@ -39,7 +39,7 @@ const LeftSidebar = () => {
           </h3>
         </Link>
         {/* TOOLS */}
-        <div className=" gap-4 flex flex-col ">
+        <div className=" gap-2 flex flex-col ">
           <TabNav name="Search" href="/">
             <Search size={20} />
           </TabNav>
@@ -51,7 +51,7 @@ const LeftSidebar = () => {
           </TabNav>
         </div>
         {/* DATED */}
-        <div className=" gap-4 flex flex-col ">
+        <div className=" gap-2 flex flex-col ">
           <p className="text-xs text-slate-500 lg:block hidden">Dated</p>
           <TabNav name="Today" href="/today">
             <CalendarCheck size={20} className="text-slate-700" />
@@ -69,7 +69,7 @@ const LeftSidebar = () => {
 
         {/* PARA */}
 
-        <div className=" gap-4 flex flex-col ">
+        <div className=" gap-2 flex flex-col ">
           <p className="text-xs  text-slate-500 lg:block hidden">PARA</p>
           <TabNav name="Project" href="/project">
             <FolderClosed size={20} className="text-slate-800" />
@@ -104,7 +104,7 @@ const TabNav: FunctionComponent<PropsWithChildren<WizardProps>> = ({
   return (
     <Link
       href={href}
-      className="flex items-center gap-2 cursor-pointer text-slate-600 text-sm font-medium "
+      className="flex items-center gap-2 px-2 py-1 cursor-pointer text-slate-600 text-sm font-medium hover:bg-slate-200 rounded-md"
     >
       <>{children}</>
       <p className="lg:block hidden">{name}</p>

@@ -14,7 +14,7 @@ import {
 const Page = () => {
   return (
     <>
-      <Header title="Task" description="Manage your tasks"></Header>
+      <Header title="Task" description="Manage your tasks"/>
       <div className="w-full">
         <div className=" py-5 flex flex-col gap-5">
           <div className="w-full border-b flex gap-5 border-slate-400">
